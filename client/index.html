@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Back End Assessment</title>
+    <title>You've Got This!</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body class="container">
-    <button id="complimentButton">Get a compliment</button>
+    <button id="complimentButton" class="fancy">Get a compliment</button>
 
-    <button id="fortuneButton">Get a fortune</button>
+    <button id="fortuneButton" class="fancy">Get a fortune</button>
     
-    <button id="fieldButton">Possible SPECs</button>
+    <button id="fieldButton" class="fancy">Possible SPECs</button>
 
     <form class="goals-collector">
         <input type="text" class="goals-input" placeholder="What's your goal?">
-        <button id="goals-submit">Submit</button>
+        <button id="goals-submit">Add</button>
     </form>
 
     <div id="goals-list-box">
@@ -23,8 +24,9 @@
     <form class="goal-changer">
       <input type="text" class="original-goal" placeholder="Which goal should update?">
       <input type="text" class="changed-goal" placeholder="What should I change it to?">
-      <button id="change-submit">Submit</button>
+      <button id="change-submit">Change</button>
     </form>
+
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
