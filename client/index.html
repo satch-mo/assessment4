@@ -16,9 +16,18 @@
     <ul class="goals-list"></ul>
 </div>
 
+<form class="goal-changer">
+  <input type="text" class="original-goal" placeholder="Which goal should update?">
+  <input type="text" class="changed-goal" placeholder="What should I change it to?">
+  <button id="change-submit">Submit</button>
+</form>
+
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
     
   </body>
 </html>
+
+
+<!-- literally spent the majority of test time working out a bug on my second feature (add goal). know i didn't build enough features to pass, but am proud of fixing it at the last moment! main.js line 34 i had goal capitalized, which when accessing the value in controller.js line 36, was returning undefined. -->

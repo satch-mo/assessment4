@@ -34,9 +34,22 @@ module.exports = {
     // console.log(req.params, req.body, req.query);
     // console.log(req.body.goal); // am i targeting the correct value inside object? UNDEFINED
     goalsArr.push(req.body.goal);
-    console.log(goalsArr);
+    // console.log(goalsArr);
     res.status(200).send(goalsArr); // this is sending back the array w object..
+  },
+  updateGoal: (req, res) => {
+    // console.log(req.body);
+    const { original, changed } = req.body;
+    goalsArr = goalsArr.map((el) => {
+      if (el === original) {
+        return (el = changed);
+      } else {
+        return el;
+      }
+    });
+    // console.log(goalsArr);
+    res.status(200).send(goalsArr);
   },
 };
 
-// holy! the capitol letter on main.js line 34 wasn't allowing me to access the value. finally got it fixed!!
+// holy! the capitol letter on main.js line 34 wasn't allowing me to access the value. finally got it fixed!
