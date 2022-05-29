@@ -26,8 +26,26 @@ module.exports = {
 
     let randomIndex = Math.floor(Math.random() * fortunes.length);
     let randomFortune = fortunes[randomIndex];
-
+    // console.log(randomFortune);
     res.status(200).send(randomFortune);
+  },
+
+  getField: (req, res) => {
+    const fields = [
+      "Web Development",
+      "Java",
+      "Python",
+      "Cybersecurity",
+      "iOS",
+      "Data Analytics",
+    ];
+    // console.log(fields);
+    let randomIndex = Math.floor(Math.random() * fields.length);
+    // console.log(randomIndex);
+    let randomField = fields[randomIndex];
+    // console.log(randomField);
+
+    res.status(200).send(randomField);
   },
 
   addGoals: (req, res) => {

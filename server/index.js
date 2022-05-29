@@ -11,12 +11,14 @@ app.use(express.json());
 const {
   getCompliment,
   getFortune,
+  getField,
   addGoals,
   updateGoal,
 } = require("./controller");
 
 app.get("/api/compliment", getCompliment);
 app.get("/api/fortune", getFortune);
+app.get("/api/field", getField);
 app.post("/api/goals", addGoals);
 app.put("/api/goals", updateGoal);
 

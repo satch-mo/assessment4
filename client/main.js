@@ -2,6 +2,8 @@ const complimentBtn = document.getElementById("complimentButton");
 
 const fortuneButton = document.getElementById("fortuneButton");
 
+const fieldBtn = document.getElementById("fieldButton");
+
 const addGoalsForm = document.querySelector(".goals-collector");
 
 const goalsFromForm = document.querySelector(".goals-input");
@@ -25,6 +27,13 @@ const getCompliment = () => {
 
 const getFortune = () => {
   axios.get("http://localhost:4000/api/fortune/").then((res) => {
+    const data = res.data;
+    alert(data);
+  });
+};
+
+const getField = () => {
+  axios.get("http://localhost:4000/api/field/").then((res) => {
     const data = res.data;
     alert(data);
   });
@@ -78,6 +87,8 @@ const changeGoalOnPage = (evt) => {
 complimentBtn.addEventListener("click", getCompliment);
 
 fortuneButton.addEventListener("click", getFortune);
+
+fieldBtn.addEventListener("click", getField);
 
 addGoalsForm.addEventListener("submit", addGoalsToPage);
 

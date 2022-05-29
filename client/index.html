@@ -5,22 +5,26 @@
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
+
     <button id="fortuneButton">Get a fortune</button>
+    
+    <button id="fieldButton">Possible SPECs</button>
 
     <form class="goals-collector">
-      <input type="text" class="goals-input" placeholder="What's your goal?">
-      <button id="goals-submit">Submit</button>
-  </form>
-  <div id="goals-list-box">
-    Goals List:
-    <ul class="goals-list"></ul>
-</div>
+        <input type="text" class="goals-input" placeholder="What's your goal?">
+        <button id="goals-submit">Submit</button>
+    </form>
 
-<form class="goal-changer">
-  <input type="text" class="original-goal" placeholder="Which goal should update?">
-  <input type="text" class="changed-goal" placeholder="What should I change it to?">
-  <button id="change-submit">Submit</button>
-</form>
+    <div id="goals-list-box">
+        Goals List:
+        <ul class="goals-list"></ul>
+    </div>
+
+    <form class="goal-changer">
+      <input type="text" class="original-goal" placeholder="Which goal should update?">
+      <input type="text" class="changed-goal" placeholder="What should I change it to?">
+      <button id="change-submit">Submit</button>
+    </form>
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
